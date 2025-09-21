@@ -9,28 +9,26 @@ export interface UserProps {
     name:     string;
     username: string;
     email:    string;
-    address:  Address;
-    phone:    string;
-    website:  string;
-    company:  Company;
-}
-interface Address {
-    street:  string;
+    address:  {
+       street:  string;
     suite:   string;
     city:    string;
     zipcode: string;
-    geo:     Geo;
-}
-
-interface Geo {
-    lat: string;
+    geo:     {
+       lat: string;
     lng: string;
-}
-interface Company {
-    name:        string;
+    };
+    };
+    phone:    string;
+    website:  string;
+    company: {
+      name:        string;
     catchPhrase: string;
     bs:          string;
+    };
 }
+
+
 export interface PostData {
   userId: number;
   id?: number;
